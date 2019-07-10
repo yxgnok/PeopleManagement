@@ -1,3 +1,11 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: kxy
+  Date: 2019/7/11 0011
+  Time: 0:03
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -35,19 +43,27 @@
             <!--列表-->
             <table cellpadding="0" cellspacing="0" class="list_hy">
                 <tr>
-                    <th scope="col">名称</th>
-                    <th scope="col">地址</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">性别</th>
+                    <th scope="col">出生日期</th>
+                    <th scope="col">入职日期</th>
+                    <th scope="col">部门</th>
+                    <th scope="col">状态</th>
                     <th scope="col">操作</th>
                 </tr>
-                <c:forEach items="${depList}" var="dep">
-                <tr>
-                    <td>${dep.name}</td>
-                    <td>${dep.address}</td>
-                    <td>
-                        <a href="toedit.do?id=${dep.id}" class="btn">编辑</a>
-                        <a href="remove.do?id=${dep.id}" class="btn">删除</a>
-                    </td>
-                </tr>
+                <c:forEach items="${staffList}" var="staff">
+                    <tr>
+                        <td>${staff.name}</td>
+                        <td>${staff.sex}</td>
+                        <td>${staff.bornDate}</td>
+                        <td>${staff.workTime}</td>
+                        <td>${staff.did}</td>
+                        <td>${staff.status}</td>
+                        <td>
+                            <a href="toedit.do?id=${staff.id}" class="btn">编辑</a>
+                            <a href="remove.do?id=${staff.id}" class="btn">删除</a>
+                        </td>
+                    </tr>
                 </c:forEach>
             </table>
             <!--列表-->

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository("departmentDao")
 public interface DepartmentDao {
-    void add(Department department);
+    void insert(Department department);
 
     void delete(int id);
 
